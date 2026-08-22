@@ -1,0 +1,143 @@
+
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+"display": {
+        "separator": "-> ",
+        "color": {
+            "separator": "magenta"
+        },
+        "constants": [
+            "───────────────────────────────────────────────────────────────────────────",
+            "│\u001b[75C│\u001b[75D"
+        ],
+    "temp": {
+      "unit": "D",
+      "ndigits": 1,
+      "color": {
+        "green": "32",
+        "yellow": "85",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default"
+    },
+    "percent": {
+      "type": [
+        "num",
+        "num-color"
+      ],
+      "ndigits": 0,
+      "color": {
+        "green": "32",
+        "yellow": "85",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default",
+      "width": 0
+    }
+    },
+    "modules": [
+    {
+        "format": "{#1}{#keys}╭{$1}╮\u001b[76D {user-name-colored}{at-symbol-colored}{host-name-colored} ",
+        "type": "title"
+    },
+    {
+        "key": "{$2}OS",
+	"type": "os"
+    },
+    {
+	"key": "{$2}Host",
+        "type": "host"
+    },
+    {
+        "key": "{$2}Kernel",
+	"type": "kernel"
+    },
+    {
+	"key": "{$2}Uptime",
+        "type": "uptime"
+    },
+    {
+        "key": "{$2}Packages",
+	"type": "packages"
+    },
+    {
+	"key": "{$2}Shell",
+	"type": "shell"
+    },
+    {
+        "key": "{$2}Terminal",
+	"type": "terminal"
+    },
+    {
+	"key": "{$2}Terminal Font",
+        "type": "terminalfont"
+    },
+    {
+        "format": "{#1}{#keys}├{$1}┤",
+        "type": "custom"
+    },
+    {
+        "key": "{$2}Display",
+	"type": "display"
+    },
+    {
+        "key": "{$2}DE",
+	"type": "de"
+    },
+    {
+        "key": "{$2}WM",
+	"type": "wm"
+    },
+    {
+        "key": "{$2}WM Theme",
+	"type":"wmtheme"
+    },
+    {
+        "key": "{$2}Theme",
+	"type": "theme"
+    },
+    {
+	"key": "{$2}Icon Pack",
+        "type": "icons"
+    },
+    {
+	"key": "{$2}Cursor Theme",
+        "type": "cursor"
+    },
+    {
+        "format": "{#1}{#keys}├{$1}┤",
+        "type": "custom"
+    },
+    {
+        "key": "{$2}CPU",
+	"type": "cpu",
+	"temp": true,
+	"format": "{name} @ {freq-max} ({temperature})"
+    },
+    {
+	"key": "{$2}GPU",
+	"type": "gpu"
+    },
+    {
+        "key": "{$2}Memory",
+        "type": "memory"
+    },
+    {
+        "key": "{$2}Swap",
+	"type": "swap"
+    },
+    {
+	"key": "{$2}Disk",
+        "type": "disk"
+    },    
+    {
+	"key": "{$2}Locale",
+        "type": "locale"
+    },
+    {
+        "format": "{#1}{#keys}╰{$1}╯",
+        "type": "custom"
+    },
+    "colors"
+  ]
+}
