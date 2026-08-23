@@ -126,11 +126,4 @@ services.dunst = {
   };
 # home.file.".config/fastfetch".source = ./config/fastfetch-configv1;
 home.file.".config/fastfetch".source = ./config/fastfetch-configv2;
-# home.file.".config/fastfetch".source = ./config/fastfetch-gentoo;
-# home.file.".config/fastfetch".source = ./config/fastfetch-fedora;
-# home.file.".config/fastfetch".source = ./config/fastfetch-customarch;
-# home.file.".config/fastfetch".source = ./config/fastfetch-kinoite;
-# home.file.".config/fastfetch".source = ./config/fastfetch-artix;
-# home.file.".config/fastfetch".source = ./config/fastfetch-void;
-# home.file.".config/fastfetch".source = ./config/fastfetch-leap;
 }
