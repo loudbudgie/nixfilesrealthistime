@@ -15,11 +15,6 @@
 hardware.graphics = {
 	enable = true;
 	enable32Bit = true;
-#	extraPackages = with pkgs; [
-#	libvdpau-va-gl
-#	libva-vdpau-driver
-#	mesa
-#	];
 };
 
 hardware.bluetooth.enable = true;
@@ -62,20 +57,6 @@ hardware.usb-modeswitch.enable = true;
   # Enable the X11 windowing system.
 # services.xserver.enable = true;
 
-# services.xserver.windowManager.qtile.enable = true;
-# services.xserver.windowManager.i3 = {
-#     enable = true;
-#     extraPackages = with pkgs; [
-# 	i3status
-# 	i3lock
-# 	xinit
-#     ];
-# };
-  # Enable the GNOME Desktop Environment.
-# services.xserver.displayManager.gdm.enable = true;
-# services.xserver.desktopManager.gnome.enable = true;
-# services.xserver.desktopManager.cinnamon.enable = true;
-
 # Enable the KDE Desktop Environment.
     services.desktopManager.plasma6.enable = false;
     services.displayManager.sddm = {
@@ -109,18 +90,6 @@ services.power-profiles-daemon.enable = true;
 services.blueman.enable = true;
 
 # services.udisks2.enable = true;
-
-# for qtile
-#    services.clipmenu = {
-#	enable = true;
-#    };
-#    services.picom = {
-#	enable = true;
-#        settings = {
-#	no-vsync = false;
-#        unredir-if-possible = true;
-#	};
-#    };
 
 xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal-wlr
@@ -186,11 +155,6 @@ programs.thunderbird.enable = true;
 
 programs.virt-manager.enable = true;
 
-# programs.sway = {
-#     enable = true;
-#     wrapperFeatures.gtk = true;
-# };
-
 programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -208,11 +172,6 @@ programs.obs-studio = {
         obs-vkcapture
     ];
 };
-    
-        
-
-
-# programs.waybar.enable = true;
 
 # programs.gnupg.agent.enable = true;
 
@@ -240,78 +199,49 @@ gnupg
 git
 neovim
 fastfetch
-# obs-studio
 prismlauncher
-# vlc
 mission-center
-# rpi-imager
 ristretto
-# discord
-# alacritty
 file-roller # archive manager that works with thunar
 htop
 bibata-cursors
 papirus-icon-theme
-# nautilus
 kitty
 ranger
-# mullvad-browser
 playerctl
-# emacs
 kdePackages.kdenlive
-# bottles
 haruna
-jstest-gtk
+# jstest-gtk
 tty-clock
-# brave
 mangohud
 gimp
 pavucontrol
-# piper
 kara
-adw-gtk3
-# chromium
 inkscape
-# ckan
-# freecad
 oversteer
 pfetch
 krita
 kdePackages.kate
 kdePackages.qt6ct
-# drawy
 
 
 # WM
-# grim
-# slurp
-# flameshot
 wl-clipboard
-# xclip
-# mako
 swaybg
 rofi
 fuzzel
 swaylock
-# swayidle
 xwayland-satellite
 # quickshell
 # xdg-utils
 nwg-look
 xeyes
 hyprpolkitagent
-# labwc
 orchis-theme
 
 # Proprietary codecs
 ffmpeg-full
 dav1d
-#gst_all_1.gstreamer
-#gst_all_1.gst-plugins-base
-#gst_all_1.gst-plugins-good
-#gst_all_1.gst-plugins-bad
-#gst_all_1.gst-plugins-ugly
-#gst_all_1.gst-libav
   ];
 
 fonts.packages = with pkgs; [
