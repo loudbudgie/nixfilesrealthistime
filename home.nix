@@ -33,21 +33,21 @@
 #    gtk = {
 #	enable = true;
 #    };
-    qt = {
-	enable = true;
+#    qt = {
+#	enable = true;
 #	platformTheme.name = "qtct";
-	style.name = "kvantum";
-	kvantum = {
-	    enable = true;
-	    themes = [ (pkgs.catppuccin.override {
-	    accent = "green";
-	    variant = "mocha";
-	    themeList = [ "kvantum" ];
-	    })
-	    ];
-	    settings.General.theme = "catppuccin-mocha-green";
-	};
-    };
+#	style.name = "kvantum";
+#	kvantum = {
+#	    enable = true;
+#	    themes = [ (pkgs.catppuccin.override {
+#	    accent = "green";
+#	    variant = "mocha";
+#	    themeList = [ "kvantum" ];
+#	    })
+#	    ];
+#	    settings.General.theme = "catppuccin-mocha-green";
+#	};
+#    };
 # for qtile
 programs.rofi = {
     enable = true;

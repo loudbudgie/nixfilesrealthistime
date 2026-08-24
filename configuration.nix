@@ -65,6 +65,13 @@ hardware.usb-modeswitch.enable = true;
     };
     services.displayManager.plasma-login-manager.enable = false;
 
+# Enable the GNOME desktop environment
+services.displayManager.gdm.enable = true;
+services.desktopManager.gnome.enable = true;
+services.gnome.core-apps.enable = false;
+services.gnome.core-developer-tools.enable = false;
+services.gnome.games.enable = false;
+environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs nautilus ];
   # Configure keymap in X11
  # services.xserver.xkb = {
 #    layout = "us";
@@ -222,7 +229,8 @@ oversteer
 pfetch
 krita
 kdePackages.kate
-kdePackages.qt6ct
+# kdePackages.qt6ct
+gnomeExtensions.arcmenu
 
 
 # WM
