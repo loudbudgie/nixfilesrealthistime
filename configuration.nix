@@ -98,33 +98,19 @@ services.blueman.enable = true;
 
 # services.udisks2.enable = true;
 
-xdg.portal.extraPortals = with pkgs; [
-  xdg-desktop-portal-wlr
-  xdg-desktop-portal-gtk
-];   
-# services.ratbagd.enable = true;
+# xdg.portal.extraPortals = with pkgs; [
+#   xdg-desktop-portal-wlr
+#   xdg-desktop-portal-gtk
+# ];   
 
 # security services I guess
 security.polkit.enable = true;
-security.pam.services.swaylock = {};
+# security.pam.services.swaylock = {};
 
 virtualisation.libvirtd.enable = true;
 virtualisation.spiceUSBRedirection.enable = true;
 
 # Systemd services
-systemd.user.services.hyprpolkitagent = {
-  description = "hyprpolkitagent";
-  wantedBy = [ "graphical-session.target" ];
-  wants = [ "graphical-session.target" ];
-  after = [ "graphical-session.target" ];
-  serviceConfig = {
-    Type = "simple";
-    ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
-    Restart = "on-failure";
-    RestartSec = 1;
-    TimeoutStopSec = 10;
-  };
-};
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -182,7 +168,7 @@ programs.obs-studio = {
 
 # programs.gnupg.agent.enable = true;
 
-programs.niri.enable = true;
+# programs.niri.enable = true;
 
 programs.fish.enable = true;
 
@@ -192,8 +178,6 @@ programs.thunar.plugins = with pkgs; [
 	thunar-archive-plugin
 	thunar-volman
 ];
-
-programs.gamescope.enable = false;
 
 nixpkgs.config.allowUnfree = true;
 
@@ -235,17 +219,17 @@ gnomeExtensions.arcmenu
 
 # WM
 wl-clipboard
-swaybg
-rofi
-fuzzel
-swaylock
-xwayland-satellite
+#swaybg
+#rofi
+#fuzzel
+#swaylock
+#xwayland-satellite
 # quickshell
 # xdg-utils
 nwg-look
 xeyes
-hyprpolkitagent
-orchis-theme
+# hyprpolkitagent
+# orchis-theme
 
 # Proprietary codecs
 ffmpeg-full

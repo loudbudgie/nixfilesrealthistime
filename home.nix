@@ -30,69 +30,6 @@
       allowImages = true;
 
     };
-#    gtk = {
-#	enable = true;
-#    };
-#    qt = {
-#	enable = true;
-#	platformTheme.name = "qtct";
-#	style.name = "kvantum";
-#	kvantum = {
-#	    enable = true;
-#	    themes = [ (pkgs.catppuccin.override {
-#	    accent = "green";
-#	    variant = "mocha";
-#	    themeList = [ "kvantum" ];
-#	    })
-#	    ];
-#	    settings.General.theme = "catppuccin-mocha-green";
-#	};
-#    };
-# for qtile
-programs.rofi = {
-    enable = true;
-    theme = "material";
-    font = "Fira Sans 12";
-    package = pkgs.rofi;
-    modes = [
-      "drun"
-      "run"
-      "window"
-      "ssh"  
-    ];
-    extraConfig = {
-      show-icons = true;
-    };
-  };
-services.swayosd = {
-    enable = true;
-    topMargin = 0.9;
-};
-programs.waybar = {
-    enable = true;
-    systemd.enable = false;
-};
-# services.clipmenu = {
-#     enable = true;
-#     launcher = "rofi";
-# };
-
-
-services.dunst = {
-  enable = true;
-  settings = {
-    global = {
-      font = "Fira Sans 12";
-      corner_radius = 8;
-	frame_color = "#70bc6d";
-	frame_width = 2;
-	background = "#50854e"; # Vibrant emerald green background
-      foreground = "#cbe8ca"; # Dark gray/black text so it's easy to read
-      timeout = 10;
-    };
-  };
-};
-# end of qtile block
 
   programs.fish = {
     enable = true;
