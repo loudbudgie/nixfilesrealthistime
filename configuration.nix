@@ -94,7 +94,7 @@ services.flatpak.enable = true;
   services.tumbler.enable = true; # thumbnail support for images
 services.power-profiles-daemon.enable = true;
 
-services.blueman.enable = true;
+# services.blueman.enable = true;
 
 # services.udisks2.enable = true;
 
@@ -152,9 +152,9 @@ programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
-    package = pkgs.steam.override {
-	extraArgs = "-cef-disable-gpu";
-    };
+#    package = pkgs.steam.override {
+#	extraArgs = "-cef-disable-gpu";
+ #   };
 };
 
 programs.obs-studio = {
@@ -211,10 +211,11 @@ kara
 inkscape
 oversteer
 pfetch
-krita
 kdePackages.kate
 # kdePackages.qt6ct
 gnomeExtensions.arcmenu
+gnomeExtensions.clipboard-indicator
+gnomeExtensions.appindicator
 
 
 # WM
@@ -245,7 +246,7 @@ fonts.packages = with pkgs; [
 ];
 
 fonts.fontconfig.defaultFonts = {
-  sansSerif = [ "IBM Plex Sans" ];
+    sansSerif = [ "IBM Plex Sans" ];
 };
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
