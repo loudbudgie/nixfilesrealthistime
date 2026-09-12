@@ -58,20 +58,20 @@ hardware.usb-modeswitch.enable = true;
 # services.xserver.enable = true;
 
 # Enable the KDE Desktop Environment.
-    services.desktopManager.plasma6.enable = false;
+    services.desktopManager.plasma6.enable = true;
     services.displayManager.sddm = {
 	enable = false;
 	wayland.enable = true;
     };
-    services.displayManager.plasma-login-manager.enable = false;
+    services.displayManager.plasma-login-manager.enable = true;
 
 # Enable the GNOME desktop environment
-services.displayManager.gdm.enable = true;
-services.desktopManager.gnome.enable = true;
-services.gnome.core-apps.enable = false;
-services.gnome.core-developer-tools.enable = false;
-services.gnome.games.enable = false;
-environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs nautilus ];
+# services.displayManager.gdm.enable = true;
+# services.desktopManager.gnome.enable = true;
+# services.gnome.core-apps.enable = false;
+# services.gnome.core-developer-tools.enable = false;
+# services.gnome.games.enable = false;
+# environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
   # Configure keymap in X11
  # services.xserver.xkb = {
 #    layout = "us";
@@ -87,12 +87,12 @@ services.avahi = {
 	openFirewall = true;
 };
 services.displayManager.ly.enable = false;
-services.gnome.gnome-keyring.enable = true;
+# services.gnome.gnome-keyring.enable = true;
 services.flatpak.enable = true;
   # thunar stuff
-  services.gvfs.enable = true; # mount, trash, and more
-  services.tumbler.enable = true; # thumbnail support for images
-services.power-profiles-daemon.enable = true;
+#  services.gvfs.enable = true; # mount, trash, and more
+#  services.tumbler.enable = true; # thumbnail support for images
+#services.power-profiles-daemon.enable = true;
 
 # services.blueman.enable = true;
 
@@ -172,12 +172,12 @@ programs.obs-studio = {
 
 programs.fish.enable = true;
 
-programs.thunar.enable = true;
-programs.xfconf.enable = true;
-programs.thunar.plugins = with pkgs; [
-	thunar-archive-plugin
-	thunar-volman
-];
+# programs.thunar.enable = true;
+#programs.xfconf.enable = true;
+#programs.thunar.plugins = with pkgs; [
+#	thunar-archive-plugin
+#	thunar-volman
+#];
 
 nixpkgs.config.allowUnfree = true;
 
@@ -192,8 +192,8 @@ neovim
 fastfetch
 prismlauncher
 mission-center
-ristretto
-file-roller # archive manager that works with thunar
+#ristretto
+#file-roller # archive manager that works with thunar
 htop
 bibata-cursors
 papirus-icon-theme
@@ -210,13 +210,13 @@ pavucontrol
 kara
 inkscape
 oversteer
-pfetch
+# pfetch
 kdePackages.kate
 # kdePackages.qt6ct
-gnomeExtensions.arcmenu
-gnomeExtensions.clipboard-indicator
-gnomeExtensions.appindicator
-
+# gnomeExtensions.arcmenu
+# gnomeExtensions.clipboard-indicator
+# gnomeExtensions.appindicator
+# nautilus
 
 # WM
 wl-clipboard

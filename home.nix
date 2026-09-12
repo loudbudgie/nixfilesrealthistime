@@ -39,6 +39,7 @@
 		echo (whoami)'@'(hostname)' '(prompt_pwd)
 		set_color blue
 		echo -n '$ '
+		set_color normal
 	'';
     };
     interactiveShellInit = ''
