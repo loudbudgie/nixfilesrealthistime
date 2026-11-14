@@ -25,7 +25,7 @@ hardware.usb-modeswitch.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_6_18;
+  boot.kernelPackages = pkgs.linuxPackages_linux_latest;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -160,7 +160,7 @@ programs.steam = {
 programs.obs-studio = {
     enable = true;
     plugins = with pkgs.obs-studio-plugins; [
-        wlrobs
+        # wlrobs
         obs-gstreamer
         obs-vkcapture
     ];
@@ -198,7 +198,7 @@ htop
 bibata-cursors
 papirus-icon-theme
 kitty
-ranger
+# ranger
 playerctl
 kdePackages.kdenlive
 haruna
@@ -206,10 +206,10 @@ haruna
 tty-clock
 mangohud
 gimp
-pavucontrol
+# pavucontrol
 kara
 inkscape
-oversteer
+# oversteer
 # pfetch
 kdePackages.kate
 # kdePackages.qt6ct
@@ -227,7 +227,7 @@ wl-clipboard
 #xwayland-satellite
 # quickshell
 # xdg-utils
-nwg-look
+# nwg-look
 xeyes
 # hyprpolkitagent
 # orchis-theme
@@ -239,6 +239,7 @@ dav1d
 
 fonts.packages = with pkgs; [
 	nerd-fonts.jetbrains-mono
+	nerd-fonts.space-mono
 	nerd-fonts.fira-code
 	fira
 	adwaita-fonts
