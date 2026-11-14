@@ -9,27 +9,27 @@
     settings.user.email = "165721002+loudbudgie@users.noreply.github.com";
 };
   home.stateVersion = "26.05";
-  services.cliphist = {
+  # services.cliphist = {
 
-      enable = true;
+      # enable = true;
 
       # A Wayland session
-      systemdTargets = ["graphical-session.target"];
+      # systemdTargets = ["graphical-session.target"];
 
       # Sway Target 
       # if using make sure that:
       # "wayland.windowManager.sway.systemd.enable = true;" is set
       # systemdTargets = ["sway-session.target"];
 
-      extraOptions = [
-        "-max-dedupe-search"
-        "10"
-        "-max-items"
-        "100"
-      ];
-      allowImages = true;
+      # extraOptions = [
+        # "-max-dedupe-search"
+        # "10"
+        # "-max-items"
+        # "100"
+      # ];
+      # allowImages = true;
 
-    };
+    # };
 
   programs.fish = {
     enable = true;
